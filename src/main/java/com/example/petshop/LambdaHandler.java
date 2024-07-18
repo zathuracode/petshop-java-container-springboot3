@@ -16,6 +16,7 @@ import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
 public class LambdaHandler implements RequestStreamHandler{
 
     private static SpringBootLambdaContainerHandler<AwsProxyRequest, AwsProxyResponse> handler;
+    
     static {
         try {
             handler = SpringBootLambdaContainerHandler.getAwsProxyHandler(PetshopApplication.class);
